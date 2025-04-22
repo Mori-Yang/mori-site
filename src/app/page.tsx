@@ -5,7 +5,6 @@ import { Projects } from "@/components/work/Projects";
 
 import { baseURL, routes } from "@/app/resources";
 import { home, about, person, newsletter } from "@/app/resources/content";
-import { Mailchimp } from "@/components";
 import { Posts } from "@/components/blog/Posts";
 
 export async function generateMetadata() {
@@ -102,6 +101,25 @@ export default function Home() {
       </RevealFx>
       {routes["/blog"] && (
         <Flex fillWidth gap="24" mobileDirection="column">
+          <Button
+            id="blog"
+            data-border="rounded"
+            href="/blog"
+            variant="secondary"
+            size="s"
+            arrowIcon
+          >
+            <Flex gap="8" vertical="center">
+              {about.avatar.display && (
+                <Avatar
+                  style={{ marginLeft: "-0.75rem", marginRight: "0.25rem" }}
+                  src={person.avatar}
+                  size="m"
+                />
+              )}
+              Blog
+            </Flex>
+          </Button>
           <Flex flex={1} paddingLeft="l">
             <Heading as="h2" variant="display-strong-xs" wrap="balance">
               Latest from the blog
@@ -112,8 +130,6 @@ export default function Home() {
           </Flex>
         </Flex>
       )}
-      <Projects range={[2]} />
-      {newsletter.display && <Mailchimp newsletter={newsletter} />}
     </Column>
   );
 }
