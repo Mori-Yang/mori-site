@@ -62,7 +62,7 @@ const home = {
   ),
 };
 
-const age = Number(Intl.DateTimeFormat(new Date()).format().slice(0, 4)) - 2000;
+const age = new Date().getFullYear() - 2000;
 
 const about = {
   label: "About",
