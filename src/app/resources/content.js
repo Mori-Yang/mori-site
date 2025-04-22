@@ -1,4 +1,5 @@
-import { InlineCode } from "@/once-ui/components";
+import { Flex, InlineCode } from "@/once-ui/components";
+import { FaLink, FaUnderline } from "react-icons/fa6";
 
 const person = {
   firstName: "Mori",
@@ -30,6 +31,11 @@ const social = [
     link: "https://github.com/Mori-Yang",
   },
   {
+    name: "WeChat",
+    icon: 'wechat',
+    value: ": ys5-14",
+  },
+  {
     name: "Bluesky",
     icon: "bluesky",
     link: "https://bsky.app/profile/mori-yang.bsky.social",
@@ -37,7 +43,7 @@ const social = [
   {
     name: "Email",
     icon: "email",
-    link: "ys0514@yeah.net",
+    value: ": ys0514@yeah.net",
   },
 ];
 
@@ -56,29 +62,48 @@ const home = {
   ),
 };
 
+const age = Number(Intl.DateTimeFormat(new Date()).format().slice(0, 4)) - 2000;
+
 const about = {
   label: "About",
   title: "About me",
   description: `Meet ${person.name}, ${person.role} from ${person.location}`,
   tableOfContent: {
     display: true,
-    subItems: false,
+    subItems: true,
   },
   avatar: {
     display: true,
   },
   calendar: {
-    display: true,
-    link: "https://cal.com",
+    display: false,
+    link: "/",
   },
   intro: {
     display: true,
     title: "Introduction",
     description: (
       <>
-        Selene is a Jakarta-based design engineer with a passion for transforming complex challenges
-        into simple, elegant design solutions. Her work spans digital interfaces, interactive
-        experiences, and the convergence of design and technology.
+        <p>
+          I am a <InlineCode>{age}</InlineCode> year old front-end developer, familiar with popular web technologies, familiar with React and other kinds of front-end frameworks and principles,
+          back-end also have a little experience.
+        </p>
+        <Flex style={{ justifyContent: 'space-between' }}>
+          <a href="https://developer.mozilla.org/en-US/docs/Glossary/HTML5" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/html5-colored.svg" width="36" height="36" alt="HTML5" /></a>
+          <a href="https://www.w3.org/TR/CSS/#css" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/css3-colored.svg" width="36" height="36" alt="CSS3" /></a>
+          <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/javascript-colored.svg" width="36" height="36" alt="JavaScript" /></a>
+          <a href="https://www.typescriptlang.org/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/typescript-colored.svg" width="36" height="36" alt="TypeScript" /></a>
+          <a href="https://code.visualstudio.com/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/visualstudiocode.svg" width="36" height="36" alt="VS Code" /></a>
+          <a href="https://reactjs.org/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/react-colored.svg" width="36" height="36" alt="React" /></a>
+          <a href="https://tailwindcss.com/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/tailwindcss-colored.svg" width="36" height="36" alt="TailwindCSS" /></a>
+          <a href="https://vitejs.dev/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/vite-colored.svg" width="36" height="36" alt="Vite" /></a>
+          <a href="https://git-scm.com/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/git-colored.svg" width="36" height="36" alt="Git" /></a>
+        </Flex>
+        <p>
+          <InlineCode>New York is 3 hours ahead of California,</InlineCode>
+          <InlineCode>but it does not make California slow.</InlineCode>
+          <InlineCode>Everyone is running their own RACE, in their own TIME.</InlineCode>
+        </p>
       </>
     ),
   },
@@ -87,43 +112,24 @@ const about = {
     title: "Work Experience",
     experiences: [
       {
-        company: "FLY",
-        timeframe: "2022 - Present",
-        role: "Senior Design Engineer",
-        achievements: [
-          <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user
-            engagement and 30% faster load times.
-          </>,
-          <>
-            Spearheaded the integration of AI tools into design workflows, enabling designers to
-            iterate 50% faster.
-          </>,
-        ],
-        images: [
-          // optional: leave the array empty if you don't want to display images
-          {
-            src: "/images/projects/project-01/cover-01.jpg",
-            alt: "Once UI Project",
-            width: 16,
-            height: 9,
-          },
-        ],
+        company: "ByteDance Toutiao",
+        timeframe: "2025.7 - Present",
+        role: "Front-end development intern",
+        achievements: [],
+        images: [],
       },
       {
-        company: "Creativ3",
-        timeframe: "2018 - 2022",
-        role: "Lead Designer",
-        achievements: [
-          <>
-            Developed a design system that unified the brand across multiple platforms, improving
-            design consistency by 40%.
-          </>,
-          <>
-            Led a cross-functional team to launch a new product line, contributing to a 15% increase
-            in overall company revenue.
-          </>,
-        ],
+        company: "Tencent Wechat",
+        timeframe: "2024.5 - 2024.9",
+        role: "Front-end development intern",
+        achievements: [],
+        images: [],
+      },
+      {
+        company: "Alibaba HelloBike",
+        timeframe: "2023.7 - 2023.10",
+        role: "Front-end development intern",
+        achievements: [],
         images: [],
       },
     ],
@@ -133,49 +139,28 @@ const about = {
     title: "Studies",
     institutions: [
       {
-        name: "University of Jakarta",
-        description: <>Studied software engineering.</>,
+        name: "Wuhan University of Science and Technology",
+        description: <>Bachelor's Degree.Studied Computer Technology.</>,
       },
       {
-        name: "Build the Future",
-        description: <>Studied online marketing and personal branding.</>,
+        name: "Wuhan University of Science and Technology",
+        description: <>Master's Degrees.Graduate DegreeStudied Network Security.</>,
       },
     ],
   },
   technical: {
-    display: true, // set to false to hide this section
+    display: false, // set to false to hide this section
     title: "Technical skills",
     skills: [
       {
-        title: "Figma",
+        title: "R",
         description: <>Able to prototype in Figma with Once UI with unnatural speed.</>,
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-02.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-          {
-            src: "/images/projects/project-01/cover-03.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-        ],
       },
       {
         title: "Next.js",
         description: <>Building next gen apps with Next.js + Once UI + Supabase.</>,
         // optional: leave the array empty if you don't want to display images
         images: [
-          {
-            src: "/images/projects/project-01/cover-04.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
         ],
       },
     ],

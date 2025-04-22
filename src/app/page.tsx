@@ -96,9 +96,9 @@ export default function Home() {
           </RevealFx>
         </Column>
       </Column>
-      <RevealFx translateY="16" delay={0.6}>
+      {/* <RevealFx translateY="16" delay={0.6}>
         <Projects range={[1, 1]} />
-      </RevealFx>
+      </RevealFx> */}
       {routes["/blog"] && (
         <Flex fillWidth gap="24" mobileDirection="column">
           <Button

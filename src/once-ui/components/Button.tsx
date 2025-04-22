@@ -11,15 +11,15 @@ interface CommonProps {
   variant?: "primary" | "secondary" | "tertiary" | "danger";
   size?: "s" | "m" | "l";
   radius?:
-    | "none"
-    | "top"
-    | "right"
-    | "bottom"
-    | "left"
-    | "top-left"
-    | "top-right"
-    | "bottom-right"
-    | "bottom-left";
+  | "none"
+  | "top"
+  | "right"
+  | "bottom"
+  | "left"
+  | "top-left"
+  | "top-right"
+  | "bottom-right"
+  | "bottom-left";
   label?: string;
   weight?: "default" | "strong";
   prefixIcon?: string;
@@ -33,6 +33,7 @@ interface CommonProps {
   style?: React.CSSProperties;
   id?: string;
   arrowIcon?: boolean;
+  value?: string;
 }
 
 export type ButtonProps = CommonProps & React.ButtonHTMLAttributes<HTMLButtonElement>;
@@ -56,6 +57,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps | AnchorProps>(
       id,
       arrowIcon = false,
       className,
+      value,
       style,
       ...props
     },
@@ -114,6 +116,15 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps | AnchorProps>(
             color={variant === "primary" ? "onSolid" : "onBackground"}
           />
         )}
+        {value && <Flex
+          paddingX="0"
+          paddingY="0"
+          textWeight="default"
+          textSize={size}
+          className="font-label"
+        >
+          {value}
+        </Flex>}
         {suffixIcon && <Icon name={suffixIcon} size={iconSize} />}
       </ElementType>
     );
