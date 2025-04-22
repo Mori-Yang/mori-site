@@ -114,7 +114,7 @@ const about = {
       {
         company: "ByteDance Toutiao",
         timeframe: "2025.7 - Present",
-        role: "Front-end development intern",
+        role: "Front-end developer",
         achievements: [],
         images: [],
       },
