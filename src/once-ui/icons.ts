@@ -36,7 +36,12 @@ import {
 import { FaBluesky, FaDiscord, FaGithub, FaLinkedin, FaXTwitter } from "react-icons/fa6";
 import { IoLogoWechat } from 'react-icons/io5'
 import { BsFillMoonStarsFill, BsSunFill } from 'react-icons/bs'
-
+import {
+  HTML5, CSS, JavaScript, TypeScript, Less, Sass,
+  React, VueJs, Pinia, ReactRouter, TailwindCSS, Spring,
+  Webpack, ViteJS, Babel, ESLint, Docker, NPM,
+  VisualStudioCode, NodeJs
+} from "developer-icons"
 export const iconLibrary: Record<string, IconType> = {
   chevronUp: HiChevronUp,
   chevronDown: HiChevronDown,
@@ -74,3 +79,6 @@ export const iconLibrary: Record<string, IconType> = {
   light: BsSunFill,
   dark: BsFillMoonStarsFill,
 };
+
+export const techIcons = [HTML5, CSS, JavaScript, TypeScript, NodeJs, React, VueJs, Pinia, ReactRouter, VisualStudioCode]
+export const techIcons2 = [Webpack, ViteJS, NPM, ESLint, Babel, Less, Sass, TailwindCSS, Docker, Spring]

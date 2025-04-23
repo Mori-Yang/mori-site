@@ -1,4 +1,5 @@
 import { Flex, InlineCode } from "@/once-ui/components";
+import { techIcons, techIcons2 } from "@/once-ui/icons";
 import { FaLink, FaUnderline } from "react-icons/fa6";
 
 const person = {
@@ -88,16 +89,15 @@ const about = {
           I am a <InlineCode>{age}</InlineCode> year old front-end developer, familiar with popular web technologies, familiar with React and other kinds of front-end frameworks and principles,
           back-end also have a little experience.
         </p>
-        <Flex style={{ justifyContent: 'space-between' }}>
-          <a href="https://developer.mozilla.org/en-US/docs/Glossary/HTML5" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/html5-colored.svg" width="36" height="36" alt="HTML5" /></a>
-          <a href="https://www.w3.org/TR/CSS/#css" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/css3-colored.svg" width="36" height="36" alt="CSS3" /></a>
-          <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/javascript-colored.svg" width="36" height="36" alt="JavaScript" /></a>
-          <a href="https://www.typescriptlang.org/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/typescript-colored.svg" width="36" height="36" alt="TypeScript" /></a>
-          <a href="https://code.visualstudio.com/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/visualstudiocode.svg" width="36" height="36" alt="VS Code" /></a>
-          <a href="https://reactjs.org/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/react-colored.svg" width="36" height="36" alt="React" /></a>
-          <a href="https://tailwindcss.com/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/tailwindcss-colored.svg" width="36" height="36" alt="TailwindCSS" /></a>
-          <a href="https://vitejs.dev/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/vite-colored.svg" width="36" height="36" alt="Vite" /></a>
-          <a href="https://git-scm.com/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/git-colored.svg" width="36" height="36" alt="Git" /></a>
+        <Flex gap="4">
+          {
+            techIcons.map((icon) => (icon({ size: 32 })))
+          }
+        </Flex>
+        <Flex gap="4">
+          {
+            techIcons2.map((icon) => (icon({ size: 32 })))
+          }
         </Flex>
         <p>
           <InlineCode>New York is 3 hours ahead of California,</InlineCode>
@@ -140,11 +140,11 @@ const about = {
     institutions: [
       {
         name: "Wuhan University of Science and Technology",
-        description: <>Bachelor's Degree.Studied Computer Technology.</>,
+        description: <>Master's Degrees.Studied Computer Technology.</>,
       },
       {
         name: "Wuhan University of Science and Technology",
-        description: <>Master's Degrees.Graduate DegreeStudied Network Security.</>,
+        description: <>Bachelor's Degree.Graduate DegreeStudied Network Security.</>,
       },
     ],
   },

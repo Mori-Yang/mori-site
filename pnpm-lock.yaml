@@ -23,6 +23,9 @@ importers:
       cookie:
         specifier: ^1.0.1
         version: 1.0.2
+      developer-icons:
+        specifier: ^5.3.4
+        version: 5.3.4(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       gray-matter:
         specifier: ^4.0.3
         version: 4.0.3
@@ -857,6 +860,12 @@ packages:
   detect-libc@2.0.3:
     resolution: {integrity: sha512-bwy0MGW55bG41VqxxypOsdSdGqLwXPI/focwgTYCFMbdUiBAxLg9CFzG08sz2aqzknwiX7Hkl0bQENjg8iLByw==}
     engines: {node: '>=8'}
+
+  developer-icons@5.3.4:
+    resolution: {integrity: sha512-/1w8HzzjaOKfPQXwuzEtxRWILXqgU5V7D+k31eeoWzxcyNsMiIa98mLoXlP0TQf5utIhtMhUtJfyaEVCsJwv/A==}
+    peerDependencies:
+      react: ^18.2.0 || ^19.0.0
+      react-dom: ^18.2.0 || ^19.0.0
 
   devlop@1.1.0:
     resolution: {integrity: sha512-RWmIqhcFf1lRYBvNmr7qTNuyCt/7/ns2jbpp1+PalgE/rDQcBT0fioSMUpJ93irlUhC5hrg4cYqe6U+0ImW0rA==}
@@ -2210,6 +2219,11 @@ snapshots:
     optional: true
 
   detect-libc@2.0.3: {}
+
+  developer-icons@5.3.4(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
+    dependencies:
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
 
   devlop@1.1.0:
     dependencies:

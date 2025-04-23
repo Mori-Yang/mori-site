@@ -1,10 +1,10 @@
 import React from "react";
 
-import { Heading, Flex, Text, Button, Avatar, RevealFx, Arrow, Column } from "@/once-ui/components";
+import { Heading, Flex, Text, Button, Avatar, RevealFx, Arrow, Column, Icon } from "@/once-ui/components";
 import { Projects } from "@/components/work/Projects";
 
 import { baseURL, routes } from "@/app/resources";
-import { home, about, person, newsletter } from "@/app/resources/content";
+import { home, about, person, newsletter, social } from "@/app/resources/content";
 import { Posts } from "@/components/blog/Posts";
 
 export async function generateMetadata() {
@@ -73,7 +73,7 @@ export default function Home() {
               {home.subline}
             </Text>
           </RevealFx>
-          <RevealFx translateY="12" delay={0.4} horizontal="start">
+          <RevealFx translateY="12" delay={0.6} horizontal="start">
             <Button
               id="about"
               data-border="rounded"
