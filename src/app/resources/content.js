@@ -91,12 +91,12 @@ const about = {
         </p>
         <Flex gap="4">
           {
-            techIcons.map((icon) => (icon({ size: 32 })))
+            techIcons.map((icon) => (icon({ size: 36 })))
           }
         </Flex>
         <Flex gap="4">
           {
-            techIcons2.map((icon) => (icon({ size: 32 })))
+            techIcons2.map((icon) => (icon({ size: 36 })))
           }
         </Flex>
         <p>
