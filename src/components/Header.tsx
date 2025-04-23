@@ -3,11 +3,12 @@
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
-import { Fade, Flex, Line, ToggleButton } from "@/once-ui/components";
+import { Fade, Flex, IconButton, Line, ToggleButton } from "@/once-ui/components";
 import styles from "@/components/Header.module.scss";
 
 import { routes, display } from "@/app/resources";
-import { person, home, about, blog, work, gallery } from "@/app/resources/content";
+import { person, about, blog, work, gallery } from "@/app/resources/content";
+import { useTheme } from "@/once-ui/hooks/useTheme";
 
 type TimeDisplayProps = {
   timeZone: string;
@@ -44,6 +45,7 @@ export default TimeDisplay;
 
 export const Header = () => {
   const pathname = usePathname() ?? "";
+  const [theme, toggleTheme] = useTheme()
 
   return (
     <>
@@ -154,7 +156,12 @@ export const Header = () => {
             textVariant="body-default-s"
             gap="20"
           >
-            <Flex hide="s">{display.time && <TimeDisplay timeZone={person.location} />}</Flex>
+            <Flex hide="s">
+              <ToggleButton prefixIcon={theme} selected onClick={() => {
+                toggleTheme()
+              }} />
+              {display.time && <TimeDisplay timeZone={person.location} />}
+            </Flex>
           </Flex>
         </Flex>
       </Flex>

@@ -35,6 +35,7 @@ import {
 
 import { FaBluesky, FaDiscord, FaGithub, FaLinkedin, FaXTwitter } from "react-icons/fa6";
 import { IoLogoWechat } from 'react-icons/io5'
+import { BsFillMoonStarsFill, BsSunFill } from 'react-icons/bs'
 
 export const iconLibrary: Record<string, IconType> = {
   chevronUp: HiChevronUp,
@@ -69,5 +70,7 @@ export const iconLibrary: Record<string, IconType> = {
   clipboard: HiClipboard,
   arrowUpRightFromSquare: HiArrowTopRightOnSquare,
   bluesky: FaBluesky,
-  wechat: IoLogoWechat
+  wechat: IoLogoWechat,
+  light: BsSunFill,
+  dark: BsFillMoonStarsFill,
 };
