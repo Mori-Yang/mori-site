@@ -50,15 +50,16 @@ const social = [
 
 const home = {
   label: "Home",
-  title: `${person.name}'s Portfolio`,
+  title: `${person.name}'s Site`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
   headline: <>
-    <p>Here is Mori,</p>
-    <p>A Frontend Developer</p>
+    <p>Mori</p>
+    <p><InlineCode>{"<FE Engineer/>"}</InlineCode></p>
   </>,
   subline: (
     <>
-      I'm Mori, a <InlineCode>{"<FE Developer/>"}</InlineCode> at ByteDance, love to develop, love to explore.
+      I'm a Front-end Engineer from China 🇨🇳<br />
+      🌟 I love open source, love exploration, and hope to improve myself from it
     </>
   ),
 };
