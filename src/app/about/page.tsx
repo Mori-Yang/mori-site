@@ -174,7 +174,7 @@ export default function About() {
               {person.role}
             </Text>
             {social.length > 0 && (
-              <Flex className={styles.blockAlign} paddingTop="20" paddingBottom="8" gap="8" wrap horizontal="center" fitWidth>
+              <div style={{ display: 'flex', flexDirection: 'row', gap: '8px' }}>
                 {social.map(
                   (item) =>
                   (
@@ -192,7 +192,7 @@ export default function About() {
                     </>
                   ),
                 )}
-              </Flex>
+              </div>
             )}
           </Column>
 

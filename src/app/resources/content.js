@@ -32,14 +32,19 @@ const social = [
     link: "https://github.com/Mori-Yang",
   },
   {
+    name: "Bluesky",
+    icon: "bluesky",
+    link: "https://bsky.app/profile/mori-yang.bsky.social",
+  },
+  {
     name: "WeChat",
     icon: 'wechat',
     value: ": ys5-14",
   },
   {
-    name: "Bluesky",
-    icon: "bluesky",
-    link: "https://bsky.app/profile/mori-yang.bsky.social",
+    name: "Discord",
+    icon: "discord",
+    value: ": mori.yang",
   },
   {
     name: "Email",
