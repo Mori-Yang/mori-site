@@ -46,7 +46,6 @@ export default TimeDisplay;
 export const Header = () => {
   const pathname = usePathname() ?? "";
   const [theme, toggleTheme] = useTheme()
-
   return (
     <>
       <Fade hide="s" fillWidth position="fixed" height="80" zIndex={9} />

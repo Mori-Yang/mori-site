@@ -44,7 +44,7 @@ const social = [
   {
     name: "Discord",
     icon: "discord",
-    value: ": mori.yang",
+    value: ": mori_y",
   },
   {
     name: "Email",
