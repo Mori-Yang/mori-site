@@ -8,7 +8,7 @@ const person = {
   get name() {
     return `${this.firstName} ${this.lastName}`;
   },
-  role: "FE Developer",
+  role: "FE Engineer",
   avatar: "/images/avatar.png",
   location: "Asia/China",
   languages: ["Chinese", "English"], // optional: Leave the array empty if you don't want to display languages
@@ -64,7 +64,7 @@ const home = {
   subline: (
     <>
       I'm a Front-end Engineer from China 🇨🇳<br />
-      🌟 I love open source, love exploration, and hope to improve myself from it
+      🌟 Stay Hungry. Stay Foolish.
     </>
   ),
 };
@@ -95,16 +95,16 @@ const about = {
           I am a <InlineCode>{age}</InlineCode> year old front-end developer, familiar with popular web technologies, familiar with React and other kinds of front-end frameworks and principles,
           back-end also have a little experience.
         </p>
-        <Flex gap="4">
+        <div style={{ display: 'flex', flexDirection: 'row', justifyContent: "space-around" }}>
           {
             techIcons.map((icon) => (icon({ size: 36 })))
           }
-        </Flex>
-        <Flex gap="4">
+        </div>
+        <div style={{ display: 'flex', flexDirection: 'row', justifyContent: "space-around" }}>
           {
             techIcons2.map((icon) => (icon({ size: 36 })))
           }
-        </Flex>
+        </div>
         <p>
           <InlineCode>New York is 3 hours ahead of California,</InlineCode>
           <InlineCode>but it does not make California slow.</InlineCode>

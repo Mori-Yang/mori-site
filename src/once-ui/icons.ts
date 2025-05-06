@@ -40,7 +40,7 @@ import {
   HTML5, CSS, JavaScript, TypeScript, Less, Sass,
   React, VueJs, Pinia, ReactRouter, TailwindCSS, Spring,
   Webpack, ViteJS, Babel, ESLint, Docker, NPM,
-  VisualStudioCode, NodeJs
+  VisualStudioCode, NodeJs, PnpmDarkWordmark
 } from "developer-icons"
 export const iconLibrary: Record<string, IconType> = {
   chevronUp: HiChevronUp,
@@ -81,4 +81,4 @@ export const iconLibrary: Record<string, IconType> = {
 };
 
 export const techIcons = [HTML5, CSS, JavaScript, TypeScript, NodeJs, React, VueJs, Pinia, ReactRouter, VisualStudioCode]
-export const techIcons2 = [Webpack, ViteJS, NPM, ESLint, Babel, Less, Sass, TailwindCSS, Docker, Spring]
+export const techIcons2 = [Webpack, ViteJS, NPM, ESLint, Babel, Less, Sass, TailwindCSS, Docker, PnpmDarkWordmark]
