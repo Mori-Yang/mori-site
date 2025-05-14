@@ -8,7 +8,7 @@ import styles from "@/components/Header.module.scss";
 
 import { routes, display } from "@/app/resources";
 import { person, about, blog, work, gallery } from "@/app/resources/content";
-import { useTheme } from "@/once-ui/hooks/useTheme";
+import { ThemeToggle } from "./ThemeToggle";
 
 type TimeDisplayProps = {
   timeZone: string;
@@ -45,7 +45,6 @@ export default TimeDisplay;
 
 export const Header = () => {
   const pathname = usePathname() ?? "";
-  const [theme, toggleTheme] = useTheme()
   return (
     <>
       <Fade hide="s" fillWidth position="fixed" height="80" zIndex={9} />
@@ -156,9 +155,7 @@ export const Header = () => {
             gap="20"
           >
             <Flex hide="s">
-              <ToggleButton prefixIcon={theme} selected onClick={() => {
-                toggleTheme()
-              }} />
+              <ThemeToggle />
               {display.time && <TimeDisplay timeZone={person.location} />}
             </Flex>
           </Flex>
