@@ -1,0 +1,179 @@
+---
+title: "Mac “装机”"
+publishedAt: "2025-06-29"
+image: "/images/blog/init/cover.png"
+summary: "Every career is a journey, filled with challenges, growth, and those significant moments that mark a shift in our path."
+tag: "Other"
+---
+
+# VPN
+
+[西部数据](https://wd-cloud.net/)
+* 代理：
+    * Clash: [for Mac](https://github.com/githubvpn007/Clash-for-Mac)
+    * All: [Clash Verge Rev](https://www.clashverge.dev/install.html)
+
+# Homebrew✨
+
+[下载.pkg 文件](https://github.com/Homebrew/brew/releases)进行安装，之后：
+<CodeBlock className="my-24"
+    compact
+    codeInstances={[
+        {
+            code: '> sudo vim ~/.zshrc\nexport PATH=/opt/homebrew/bin:$PATH\n> source ～/.zshrc\n> brew -v',
+            label: 'Bash',
+            language: 'bash'
+        },
+    ]}
+    copyButton
+/>
+
+# 字体
+* [Victor Mono](https://rubjo.github.io/victor-mono/)
+
+# om-my-zsh
+安装：
+<CodeBlock className="my-24"
+    compact
+    codeInstances={[
+        {
+            code: 'sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"',
+            label: 'Bash',
+            language: 'bash'
+        },
+    ]}
+    copyButton
+/>
+zsh配置：
+<CodeBlock className="my-24"
+    compact
+    codeInstances={[
+        {
+            code: 'ZSH_THEME="ys"\nalias cls="clear"',
+            label: 'Bash',
+            language: 'bash'
+        },
+    ]}
+    copyButton
+/>
+[其他配置推荐](https://www.haoyep.com/posts/zsh-config-oh-my-zsh/)
+
+# NVM✨
+
+[下载 Zip 压缩包](https://github.com/nvm-sh/nvm) 或 使用 homebrew 安装
+<CodeBlock className="my-24"
+    compact
+    codeInstances={[
+        {
+            code: 'brew install nvm',
+            label: 'Bash',
+            language: 'bash'
+        },
+    ]}
+    copyButton
+/>
+通过 <InlineCode>shift+command+.</InlineCode> 查看隐藏文件，将解压后的结果改成.nvm，然后再放入用户根目录
+
+然后对zsh进行配置：
+<CodeBlock className="my-24"
+    compact
+    codeInstances={[
+        {
+            code: '# NVM\nexport NVM_DIR="$HOME/.nvm"\n[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm\n[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"',
+            label: 'Bash',
+            language: 'bash'
+        },
+    ]}
+    copyButton
+/>
+最后 <InlineCode>source ~/.zshrc</InlineCode>
+
+nvm相关命令
+<CodeBlock className="my-24"
+    compact
+    codeInstances={[
+        {
+            code: 'nvm -help #查看nvm命令帮助\nnvm list available  #获取可安装的nodejs环境\nnvm ls #查看已安装的node版本\nnvm install <version> #下载指定版本的nodejs\nnvm use <version> #切换到指定版本的nodejs\nnvm alias <name> <version> #为不同版本设置不同的别名 windows下可能没有alias\nnvm uninstall <version> #卸载指定版本的nodejs\nnvm current #查看当前使用的nodejs版本',
+            label: 'Bash',
+            language: 'bash'
+        },
+    ]}
+    copyButton
+/>
+
+# Git✨
+
+安装：
+<CodeBlock className="my-24"
+    compact
+    codeInstances={[
+        {
+            code: 'brew install git',
+            label: 'Bash',
+            language: 'bash'
+        },
+    ]}
+    copyButton
+/>
+配置：
+<CodeBlock className="my-24"
+    compact
+    codeInstances={[
+        {
+            code: 'ssh-keygen -t rsa -C "email"\n#配置用户名和邮箱\ngit config --global user.name "name"\ngit config --global user.email "email"',
+            label: 'Bash',
+            language: 'bash'
+        },
+    ]}
+    copyButton
+/>
+
+# 软件
+
+* [Google Chrome](https://www.google.com/intl/zh-CN/chrome/)
+* [VSCode](https://code.visualstudio.com/)
+* [QSpace Pro](https://qspace.awehunt.com/zh-cn/index.html)
+* [Loop](https://github.com/MrKai77/Loop)
+* [Mac Mouse Fix](https://macmousefix.com/)
+* [Gifski](https://gif.ski/)
+* [AppCleaner](https://freemacsoft.net/appcleaner/)
+* [Raycast](https://www.raycast.com/)
+* [AltTab](https://alt-tab-macos.netlify.app/)
+* [PixPin](https://pixpin.cn/)
+* [Amazon Q](https://aws.amazon.com/cn/q/developer/build/?trk=e7e88218-8649-422c-8f4c-2af954cf1e1a&sc_channel=ps&ef_id=Cj0KCQjwyIPDBhDBARIsAHJyyVgpWAY8Vel0_EjGEzamX8Vyi-NIzHlkACv6xJcVl8cqX4yrx5-XBd4aAtIzEALw_wcB:G:s&s_kwcid=AL!4422!3!698165432143!e!!g!!amazon%20q%20developer!21048268275!168533076464&gad_campaignid=21048268275&gbraid=0AAAAADjHtp-DpbW7Lm7ugpdbguR7DHFkP&gclid=Cj0KCQjwyIPDBhDBARIsAHJyyVgpWAY8Vel0_EjGEzamX8Vyi-NIzHlkACv6xJcVl8cqX4yrx5-XBd4aAtIzEALw_wcB)
+* [语雀](https://www.yuque.com/)
+* XCode
+
+# VSCode 插件 & 用户配置
+
+* HTML CSS Support
+* JavaScript(ES6) code snippets
+* Live Server
+* Auto Close Tag
+* Auto Import
+* Auto Rename Tag
+* Better Align
+* Better Comments
+* Chinese
+* Comment Translate
+* Error Lens
+* ESLint
+* File Nesting Updater
+* Amazon Q for command line
+* ES7+React/Redux/React-Native snippets
+* Markdown PDF
+* Material Icon Theme
+* open in browser
+* Vitest
+
+<CodeBlock className="my-24"
+    compact
+    codeInstances={[
+        {
+            code: '{\n\t"explorer.compactFolders": false,\n\t"eslint.format.enable": true,\n\t"eslint.useFlatConfig": true,\n\t"notebook.formatOnSave.enabled": true,\n\t"files.autoSaveWhenNoErrors": true,\n\t"liveServer.settings.donotShowInfoMsg": true,\n\t"workbench.iconTheme": "material-icon-theme",\n\t"git.autofetch": true,\n\t"editor.formatOnSave": true,\n\t"editor.codeActionsOnSave": {\n\t\t"source.fixAll.eslint": "explicit",\n\t\t"source.organizeImports": "always"\n\t}\n\t"editor.fontLigatures": "\'ss01\'",\n\t"editor.fontFamily": "Victor Mono",\n\t"editor.codeLensFontFamily": "Victor Mono",\n\t"editor.fontWeight": "500",\n\t"editor.fontSize": 16,\n\t"terminal.integrated.fontSize": 14,\n\t"terminal.integrated.fontFamily": "Victor Mono",\n\t"terminal.integrated.fontWeight": "bold",\n\t"editor.tokenColorCustomizations": {\n\t\t"textMateRules": [\n\t\t\t{\n\t\t\t\t"scope": ["comment", "entity.name.type.class", "keyword", "constant", "storage.modifier", "storage.type.class.js"],\n\t\t\t\t"settings": {\n\t\t\t\t\t"fontStyle": "italic"\n\t\t\t\t}\n\t\t\t},\n\t\t\t{\n\t\t\t\t"scope": ["invalid", "keyword.operator", "constant.numeric.css", "keyword.other.unit.px.css", "constant.numeric.decimal.js", "constant.numeric.json"],\n\t\t\t\t"settings": {\n\t\t\t\t\t"fontStyle": "italic"\n\t\t\t\t}\n\t\t\t}\n\t\t]\n\t},\n\t"files.exclude": {\n\t\t"**/.git": false\n\t},\n\t"workbench.colorCustomizations": {\n\t\t"editorCursor.foreground": "#5EE9B5"\n\t},\n\t"git.openRepositoryInParentFolders": "never"\n}',
+            label: 'vscode setting',
+            language: 'json'
+        },
+    ]}
+    copyButton
+/>

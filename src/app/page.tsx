@@ -1,10 +1,8 @@
-import React from "react";
 
-import { Heading, Flex, Text, Button, Avatar, RevealFx, Arrow, Column, Icon } from "@/once-ui/components";
-import { Projects } from "@/components/work/Projects";
+import { Avatar, Button, Column, Flex, Heading, RevealFx, Text } from "@/once-ui/components";
 
 import { baseURL, routes } from "@/app/resources";
-import { home, about, person, newsletter, social } from "@/app/resources/content";
+import { about, home, person } from "@/app/resources/content";
 import { Posts } from "@/components/blog/Posts";
 
 export async function generateMetadata() {
@@ -72,27 +70,6 @@ export default function Home() {
             <Text wrap="balance" onBackground="neutral-weak" variant="heading-default-xl">
               {home.subline}
             </Text>
-          </RevealFx>
-          <RevealFx translateY="12" delay={0.6} horizontal="start">
-            <Button
-              id="about"
-              data-border="rounded"
-              href="/about"
-              variant="secondary"
-              size="m"
-              arrowIcon
-            >
-              <Flex gap="8" vertical="center">
-                {about.avatar.display && (
-                  <Avatar
-                    style={{ marginLeft: "-0.75rem", marginRight: "0.25rem" }}
-                    src={person.avatar}
-                    size="m"
-                  />
-                )}
-                {about.title}
-              </Flex>
-            </Button>
           </RevealFx>
         </Column>
       </Column>

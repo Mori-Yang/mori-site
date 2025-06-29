@@ -1,8 +1,8 @@
 "use client";
 
+import { formatDate } from "@/app/utils/formatDate";
 import { Column, Flex, Heading, SmartImage, SmartLink, Tag, Text } from "@/once-ui/components";
 import styles from "./Posts.module.scss";
-import { formatDate } from "@/app/utils/formatDate";
 
 interface PostProps {
   post: any;
@@ -31,7 +31,7 @@ export default function Post({ post, thumbnail }: PostProps) {
         {post.metadata.image && thumbnail && (
           <SmartImage
             priority
-            maxWidth={20}
+            maxWidth={12}
             className={styles.image}
             sizes="640px"
             border="neutral-alpha-weak"
@@ -39,7 +39,7 @@ export default function Post({ post, thumbnail }: PostProps) {
             radius="m"
             src={post.metadata.image}
             alt={"Thumbnail of " + post.metadata.title}
-            aspectRatio="16 / 9"
+            aspectRatio="3/4"
           />
         )}
         <Column position="relative" fillWidth gap="8" vertical="center">

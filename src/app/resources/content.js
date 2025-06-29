@@ -1,6 +1,5 @@
-import { Flex, InlineCode } from "@/once-ui/components";
+import { InlineCode } from "@/once-ui/components";
 import { techIcons, techIcons2 } from "@/once-ui/icons";
-import { FaLink, FaUnderline } from "react-icons/fa6";
 
 const person = {
   firstName: "Mori",
@@ -15,7 +14,7 @@ const person = {
 };
 
 const newsletter = {
-  display: true,
+  display: false,
   title: <>Subscribe to {person.firstName}'s Newsletter</>,
   description: (
     <>
@@ -64,7 +63,7 @@ const home = {
   subline: (
     <>
       I'm a Front-end Engineer from China 🇨🇳<br />
-      🌟 Stay Hungry. Stay Foolish.
+      🌟 Stay Hungry, Stay Foolish.
     </>
   ),
 };
@@ -175,7 +174,7 @@ const about = {
 
 const blog = {
   label: "Blog",
-  title: "Writing about design and tech...",
+  title: "A collection of articles on ...",
   description: `Read what ${person.name} has been up to recently`,
   // Create new blog posts by adding a new .mdx file to app/blog/posts
   // All posts will be listed on the /blog route
@@ -268,4 +267,5 @@ const gallery = {
   ],
 };
 
-export { person, social, newsletter, home, about, blog, work, gallery };
+export { about, blog, gallery, home, newsletter, person, social, work };
+

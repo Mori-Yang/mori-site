@@ -4,7 +4,7 @@ const routes = {
   "/": true,
   "/about": true,
   // "/work": true,
-  // "/blog": true,
+  "/blog": true,
   // "/gallery": true,
 };
 
@@ -106,4 +106,5 @@ const mailchimp = {
   },
 };
 
-export { routes, protectedRoutes, effects, style, display, mailchimp, baseURL };
+export { baseURL, display, effects, mailchimp, protectedRoutes, routes, style };
+

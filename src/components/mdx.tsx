@@ -1,12 +1,12 @@
 import { MDXRemote, MDXRemoteProps } from "next-mdx-remote/rsc";
 import React, { ReactNode } from "react";
 
-import { SmartImage, SmartLink, Text } from "@/once-ui/components";
-import { CodeBlock } from "@/once-ui/modules";
 import { HeadingLink } from "@/components";
+import { InlineCode, SmartImage, SmartLink, Text } from "@/once-ui/components";
+import { CodeBlock } from "@/once-ui/modules";
 
-import { TextProps } from "@/once-ui/interfaces";
 import { SmartImageProps } from "@/once-ui/components/SmartImage";
+import { TextProps } from "@/once-ui/interfaces";
 
 type TableProps = {
   data: {
@@ -140,6 +140,7 @@ const components = {
   a: CustomLink as any,
   Table,
   CodeBlock,
+  InlineCode
 };
 
 type CustomMDXProps = MDXRemoteProps & {
