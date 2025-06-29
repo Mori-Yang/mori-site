@@ -6,6 +6,17 @@ summary: "Every career is a journey, filled with challenges, growth, and those s
 tag: "Other"
 ---
 
+# Mac 基础设置
+<InlineCode>系统设置 > 桌面与程序坞 > 桌面与台前调度 > 开启台前调度</InlineCode>
+
+<InlineCode>系统设置 > 搜索："触发角快捷键" > 左下角"锁定屏幕"</InlineCode>
+
+<InlineCode>系统设置 > 键盘 > 关闭"听写-快捷键"</InlineCode>
+
+<InlineCode>桌面 > command + , > 在桌面上显示硬盘</InlineCode>
+
+<InlineCode>系统设置 > 键盘 > 键盘快捷键 > 聚焦 修改为 command + J</InlineCode>
+
 # VPN
 
 [西部数据](https://wd-cloud.net/)
@@ -21,7 +32,6 @@ tag: "Other"
     codeInstances={[
         {
             code: '> sudo vim ~/.zshrc\nexport PATH=/opt/homebrew/bin:$PATH\n> source ～/.zshrc\n> brew -v',
-            label: 'Bash',
             language: 'bash'
         },
     ]}
@@ -38,7 +48,6 @@ tag: "Other"
     codeInstances={[
         {
             code: 'sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"',
-            label: 'Bash',
             language: 'bash'
         },
     ]}
@@ -50,7 +59,6 @@ zsh配置：
     codeInstances={[
         {
             code: 'ZSH_THEME="ys"\nalias cls="clear"',
-            label: 'Bash',
             language: 'bash'
         },
     ]}
@@ -66,7 +74,6 @@ zsh配置：
     codeInstances={[
         {
             code: 'brew install nvm',
-            label: 'Bash',
             language: 'bash'
         },
     ]}
@@ -80,7 +87,6 @@ zsh配置：
     codeInstances={[
         {
             code: '# NVM\nexport NVM_DIR="$HOME/.nvm"\n[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm\n[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"',
-            label: 'Bash',
             language: 'bash'
         },
     ]}
@@ -94,7 +100,6 @@ nvm相关命令
     codeInstances={[
         {
             code: 'nvm -help #查看nvm命令帮助\nnvm list available  #获取可安装的nodejs环境\nnvm ls #查看已安装的node版本\nnvm install <version> #下载指定版本的nodejs\nnvm use <version> #切换到指定版本的nodejs\nnvm alias <name> <version> #为不同版本设置不同的别名 windows下可能没有alias\nnvm uninstall <version> #卸载指定版本的nodejs\nnvm current #查看当前使用的nodejs版本',
-            label: 'Bash',
             language: 'bash'
         },
     ]}
@@ -109,7 +114,6 @@ nvm相关命令
     codeInstances={[
         {
             code: 'brew install git',
-            label: 'Bash',
             language: 'bash'
         },
     ]}
@@ -121,7 +125,6 @@ nvm相关命令
     codeInstances={[
         {
             code: 'ssh-keygen -t rsa -C "email"\n#配置用户名和邮箱\ngit config --global user.name "name"\ngit config --global user.email "email"',
-            label: 'Bash',
             language: 'bash'
         },
     ]}
@@ -159,7 +162,6 @@ nvm相关命令
 * Error Lens
 * ESLint
 * File Nesting Updater
-* Amazon Q for command line
 * ES7+React/Redux/React-Native snippets
 * Markdown PDF
 * Material Icon Theme
@@ -171,7 +173,6 @@ nvm相关命令
     codeInstances={[
         {
             code: '{\n\t"explorer.compactFolders": false,\n\t"eslint.format.enable": true,\n\t"eslint.useFlatConfig": true,\n\t"notebook.formatOnSave.enabled": true,\n\t"files.autoSaveWhenNoErrors": true,\n\t"liveServer.settings.donotShowInfoMsg": true,\n\t"workbench.iconTheme": "material-icon-theme",\n\t"git.autofetch": true,\n\t"editor.formatOnSave": true,\n\t"editor.codeActionsOnSave": {\n\t\t"source.fixAll.eslint": "explicit",\n\t\t"source.organizeImports": "always"\n\t}\n\t"editor.fontLigatures": "\'ss01\'",\n\t"editor.fontFamily": "Victor Mono",\n\t"editor.codeLensFontFamily": "Victor Mono",\n\t"editor.fontWeight": "500",\n\t"editor.fontSize": 16,\n\t"terminal.integrated.fontSize": 14,\n\t"terminal.integrated.fontFamily": "Victor Mono",\n\t"terminal.integrated.fontWeight": "bold",\n\t"editor.tokenColorCustomizations": {\n\t\t"textMateRules": [\n\t\t\t{\n\t\t\t\t"scope": ["comment", "entity.name.type.class", "keyword", "constant", "storage.modifier", "storage.type.class.js"],\n\t\t\t\t"settings": {\n\t\t\t\t\t"fontStyle": "italic"\n\t\t\t\t}\n\t\t\t},\n\t\t\t{\n\t\t\t\t"scope": ["invalid", "keyword.operator", "constant.numeric.css", "keyword.other.unit.px.css", "constant.numeric.decimal.js", "constant.numeric.json"],\n\t\t\t\t"settings": {\n\t\t\t\t\t"fontStyle": "italic"\n\t\t\t\t}\n\t\t\t}\n\t\t]\n\t},\n\t"files.exclude": {\n\t\t"**/.git": false\n\t},\n\t"workbench.colorCustomizations": {\n\t\t"editorCursor.foreground": "#5EE9B5"\n\t},\n\t"git.openRepositoryInParentFolders": "never"\n}',
-            label: 'vscode setting',
             language: 'json'
         },
     ]}
